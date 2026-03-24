@@ -6,7 +6,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["network"],
-  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "clock", "tray"],
+  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "battery", "clock", "tray"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -32,7 +32,8 @@
   },
 
   "cpu": {
-    "format": "  {usage}%"
+    "format": "  {usage}% {avg_frequency}GHz",
+    "intrval": 5
   },
 
   "memory": {
