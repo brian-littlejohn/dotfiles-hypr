@@ -21,9 +21,10 @@
 
   "network": {
     "format-wifi": "  {signalStrength}% | {ipaddr}",
-    "format-ethernet": "󰈀 {ipaddr}",
-    "format-disconnected": "  Offline"
-  },
+    "format-ethernet": "󰈀 {ipaddr}/{cidr} |{bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
+    "format-disconnected": "  Offline",
+    "interval": 3  
+},
 
   "battery": {
     "format": "{capacity}%",
