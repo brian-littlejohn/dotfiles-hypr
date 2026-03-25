@@ -6,7 +6,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["network"],
-  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "battery", "clock", "tray"],
+  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "battery", "clock", "tray","custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -83,8 +83,14 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-},
 
+  },
+  
+  "custom/power": {
+    "format":"⏻",
+    "on-click": "exec ~/.config/hypr/scripts/power_menu.sh",
+    "tooltip": false
+   },
 
 
 }
