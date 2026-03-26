@@ -7,6 +7,7 @@ blueman
 bluez
 bluez-utils
 btrfs-progs
+chafa
 code
 cosmic-greeter
 cronie
@@ -16,6 +17,7 @@ dolphin
 dunst
 efibootmgr
 fakeroot
+fastfetch
 firefox
 freerdp
 fuzzel
@@ -71,6 +73,7 @@ pipewire-alsa
 pipewire-pulse
 polkit-kde-agent
 pulseaudio-alsa
+qalculate-gtk
 qpwgraph
 qt5-wayland
 qt5ct
