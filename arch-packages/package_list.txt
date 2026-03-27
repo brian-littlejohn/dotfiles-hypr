@@ -51,6 +51,7 @@ iwd
 jq
 kitty
 kvantum
+libreoffice-fresh
 libva-intel-driver
 linux
 linux-firmware
