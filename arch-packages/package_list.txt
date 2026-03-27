@@ -26,7 +26,6 @@ fastfetch
 firefox
 freerdp
 fuzzel
-gcc
 ghostty
 git
 gnome-keyring
@@ -56,7 +55,6 @@ libva-intel-driver
 linux
 linux-firmware
 linux-lts
-make
 mako
 nano
 network-manager-applet
@@ -100,7 +98,6 @@ qalculate-gtk
 qpwgraph
 qt5-wayland
 qt5ct
-qt6-virtualkeyboard
 qt6-wayland
 qt6ct
 remmina
@@ -114,6 +111,8 @@ sudo
 tailscale
 thunar
 timeshift
+tlp
+tlpui
 ttf-0xproto-nerd
 ttf-3270-nerd
 ttf-adwaitamono-nerd
@@ -235,14 +234,15 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-vlgothic
 ttf-zed-mono-nerd
-tuned
 unzip
+usbutils
 uwsm
 vim
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
 waybar
+waypipe
 wget
 wireless_tools
 wireplumber
