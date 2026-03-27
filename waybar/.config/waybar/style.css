@@ -23,14 +23,20 @@ window#waybar {
 
 #workspaces button {
   border-radius: 5px;
-  color: #eceff4;
+  color: #9ec2ff;
   padding: 1px 6px;
   margin-right: 2px;
   margin-left: 2px;
 }
 
+#workspaces button:hover {
+  background-color: #16305c;
+}
+
+
 #workspaces button.active {
   border: 1px solid #d8dee9;  
+  text-decoration: underline;
 }
 
 #clock, #battery, #network, #cpu, #memory {

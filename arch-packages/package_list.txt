@@ -2,6 +2,7 @@
 adw-gtk-theme
 alsa-firmware
 ark
+audacious
 base
 base-devel
 bash-completion
@@ -34,6 +35,7 @@ gobject-introspection
 grim
 grub
 grub-btrfs
+gst-plugins-good
 gum
 gvfs
 gvfs-smb
@@ -82,7 +84,6 @@ pipewire-alsa
 pipewire-pulse
 polkit-kde-agent
 power-profiles-daemon
-pulseaudio-alsa
 python-build
 python-click
 python-distro
