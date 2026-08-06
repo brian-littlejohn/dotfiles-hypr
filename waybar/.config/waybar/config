@@ -35,8 +35,8 @@
   },
 
   "network": {
-    "format-wifi": "  {signalStrength}% | {ipaddr}",
-    "format-ethernet": "󰈀 {ipaddr}/{cidr} |{bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
+    "format-wifi": "  {signalStrength}% | {ipaddr}/{cidr} | {bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr} | {bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
     "format-disconnected": "  Offline",
     "interval": 3  
 },
