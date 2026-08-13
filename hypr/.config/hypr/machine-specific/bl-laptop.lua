@@ -9,13 +9,13 @@ local leftMonitor = "eDP-1"
 
 
 hl.monitor({
-    output = leftMonitor,
+    output = "eDP-1",
     mode = "preferred",
     position = "auto",
-    scale = "1.5",
+    scale = 1.5,
 })
 
 return {
-	left = leftMonitor
-	right = leftMonitor
+	left = leftMonitor,
+	right = leftMonitor,
 }
