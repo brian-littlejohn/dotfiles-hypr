@@ -15,7 +15,19 @@
 -- source = ~/.config/hypr/myColors.conf
 
 -- Helper function to fetch the system's hostname safely
+
 local function get_hostname()
+    local handle = io.open("/etc/hostname", "r")
+    if not handle then return "default" end
+
+    local result = handle:read("*a")
+    handle:close()
+
+    -- Remove trailing whitespace/newlines
+    return result:gsub("%s+", "")
+end
+
+local function get_hostname_old()
     local handle = io.popen("hostname")
     if not handle then return "default" end
     
