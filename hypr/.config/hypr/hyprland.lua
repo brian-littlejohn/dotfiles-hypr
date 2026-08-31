@@ -497,6 +497,7 @@ hl.workspace_rule({
     workspace = "10",
     default_name = "10:Laptop",
     border_size = 1,
+    monitor = monitors.left
 })
 
 hl.window_rule({
