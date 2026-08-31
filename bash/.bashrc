@@ -13,3 +13,6 @@ PS1='[\u@\h \W]\$ '
 
 
 fastfetch
+
+# Added by hey installer
+export PATH="/home/brianl/.local/bin:$PATH"
