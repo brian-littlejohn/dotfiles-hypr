@@ -651,6 +651,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("mako")
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("hyprpaper")
+    h1.exec_cmd("nextcloud")
 end)
 
 hl.on("config.reloaded", function()
