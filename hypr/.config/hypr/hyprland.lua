@@ -651,11 +651,11 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("mako")
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("hyprpaper")
-    h1.exec_cmd("nextcloud")
+    hl.exec_cmd("nextcloud")
 end)
 
 hl.on("config.reloaded", function()
-    hl.exec_cmd("nextcloud")
+    
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"adw-gtk3-dark\"")
 end)
