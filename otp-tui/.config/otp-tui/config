@@ -1,0 +1,3 @@
+BACKUP_DIR=~/Nextcloud/OTP/Backups
+AUTO_BACKUP=true
+AUTO_LOGIN=true
