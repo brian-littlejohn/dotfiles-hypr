@@ -46,9 +46,14 @@ fi
 
 # id and a display label, tab-separated: fuzzel matches/shows the label
 # (--with-nth=2) but prints the id back out on selection (--accept-nth=1),
-# so nothing has to be cut back apart afterward.
+# so nothing has to be cut back apart afterward. The folder is appended
+# when set, so two accounts with the same name in different folders
+# don't show up as identical, indistinguishable entries.
 choice=$(printf '%s' "$accounts" |
-	jq -r '.[] | [.id, (if .issuer != "" then "\(.name) (\(.issuer))" else .name end)] | @tsv' |
+	jq -r '.[] | [.id, (
+		.name
+		+ (if .folder != "" then " [\(.folder)]" else "" end)
+	)] | @tsv' |
 	fuzzel --dmenu --with-nth=2 --accept-nth=1 --prompt="Account: ") || exit 0
 
 if [ -z "$choice" ]; then
