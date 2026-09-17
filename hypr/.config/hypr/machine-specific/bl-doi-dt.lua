@@ -30,6 +30,13 @@ hl.device({
     sensitivity = -0.75,
 })
 
+--## Keyboard Settings ###
+hl.config({
+    input = {
+        numlock_by_default = true,
+    },
+})
+
 return {
     left = leftMonitor,
     right = rightMonitor,

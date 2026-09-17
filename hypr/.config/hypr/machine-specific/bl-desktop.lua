@@ -20,6 +20,14 @@ hl.monitor({
     position = "0x0",
     scale = "1.25",
 })
+
+--## Keyboard Settings ###
+hl.config({
+    input = {
+        numlock_by_default = true,
+    },
+})
+
 return {
     left = leftMonitor,
     right = rightMonitor,
