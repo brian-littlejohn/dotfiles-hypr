@@ -654,7 +654,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("nextcloud")
     hl.exec_cmd("otp-tui agent run --on-lock-cmd 'pkill -RTMIN+8 waybar'")
-    h1.exec_cmd("diskie --tray")
+    hl.exec_cmd("udiskie --tray")
 end)
 
 hl.on("config.reloaded", function()
