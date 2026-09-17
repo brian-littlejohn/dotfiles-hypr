@@ -1,3 +1,4 @@
 background-opacity = .9
 confirm-close-surface = false
 term = xterm-256color
+theme = Catppuccin Mocha
