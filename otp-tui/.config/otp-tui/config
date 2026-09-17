@@ -1,3 +1,4 @@
 BACKUP_DIR=~/Nextcloud/OTP/Backups
 AUTO_BACKUP=true
 AUTO_LOGIN=true
+AUTO_LOGIN_STORAGE=keyring
