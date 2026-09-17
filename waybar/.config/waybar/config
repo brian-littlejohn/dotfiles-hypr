@@ -6,7 +6,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["network"],
-  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "battery", "clock", "tray","custom/power"],
+  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "battery", "clock","custom/otp", "tray","custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -110,5 +110,13 @@
     "tooltip": false
    },
 
-
+  "custom/otp": {
+	"exec": "otp-tui agent status --waybar",
+	"return-type": "json",
+	"interval": 5,
+	"signal": 8,
+	"on-click": "~/.config/otp-tui/otp-menu.sh",
+	"tooltip": true
+	}
 }
+
