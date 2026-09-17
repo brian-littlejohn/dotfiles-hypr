@@ -49,3 +49,12 @@ window#waybar {
   font-size:15px;
   background-color: #19191e
 }
+
+/* Merge into your waybar style.css. Purely cosmetic — the module works
+ * without this, just unstyled. */
+#custom-otp.locked {
+	color: #f38ba8;
+}
+#custom-otp.unlocked {
+	color: #a6e3a1;
+}

@@ -292,6 +292,7 @@ hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("~/.config/otp-tui/otp-menu.sh"))
 
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
@@ -652,6 +653,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("nextcloud")
+    hl.exec_cmd("otp-tui agent run --on-lock-cmd 'pkill -RTMIN+8 waybar'")
 end)
 
 hl.on("config.reloaded", function()
