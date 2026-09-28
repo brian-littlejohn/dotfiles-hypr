@@ -345,6 +345,8 @@ hl.bind(mainMod .. " + SHIFT + KP_8", hl.dsp.window.move({ workspace = 8 }))
 hl.bind(mainMod .. " + SHIFT + KP_9", hl.dsp.window.move({ workspace = 9 }))
 hl.bind(mainMod .. " + SHIFT + KP_0", hl.dsp.window.move({ workspace = 10 }))
 
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.focus({ workspace = "name:Empty" }))
+
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
@@ -499,6 +501,11 @@ hl.workspace_rule({
     default_name = "10:Laptop",
     border_size = 1,
     monitor = monitors.left
+})
+
+hl.workspace_rule({
+    workspace = "name:Empty",
+    monitor = monitors.left,
 })
 
 hl.window_rule({
