@@ -345,7 +345,10 @@ hl.bind(mainMod .. " + SHIFT + KP_8", hl.dsp.window.move({ workspace = 8 }))
 hl.bind(mainMod .. " + SHIFT + KP_9", hl.dsp.window.move({ workspace = 9 }))
 hl.bind(mainMod .. " + SHIFT + KP_0", hl.dsp.window.move({ workspace = 10 }))
 
-hl.bind(mainMod .. " + SHIFT + P", hl.dsp.focus({ workspace = "name:Empty" }))
+hl.bind(mainMod .. " + SHIFT + P", function()
+    hl.dispatch(hl.dsp.focus({ workspace = "name:Empty" }))
+    hl.dispatch(hl.dsp.focus({ workspace = 3 }))
+end)
 
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
