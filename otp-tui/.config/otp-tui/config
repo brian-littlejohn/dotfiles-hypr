@@ -3,3 +3,7 @@ AUTO_BACKUP=true
 AUTO_LOGIN=true
 AUTO_LOGIN_STORAGE=keyring
 AGENT_IDLE_TIMEOUT=180m
+AUTO_SYNC=true
+NEXTCLOUD_PATH=/otp-tui/otp-tui-sync.json
+NEXTCLOUD_URL=https://nc.thelittlejohns.us
+NEXTCLOUD_USER=brian@thelittlejohns.us
