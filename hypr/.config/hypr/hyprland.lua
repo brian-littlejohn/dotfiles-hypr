@@ -16,26 +16,18 @@
 
 -- Helper function to fetch the system's hostname safely
 
-local function get_hostname_old()
-    local handle = io.open("/etc/hostname", "r")
-    if not handle then return "default" end
-
-    local result = handle:read("*a")
-    handle:close()
-
-    -- Remove trailing whitespace/newlines
-    return result:gsub("%s+", "")
-end
-
+-- Reads files directly rather than shelling out to `hostname`, which isn't
+-- installed by default on Arch (popen then silently returns an empty string).
 local function get_hostname()
-    local handle = io.popen("hostname")
-    if not handle then return "default" end
-    
-    local result = handle:read("*a")
-    handle:close()
-    
-    -- Clean up trailing newlines or whitespace characters
-    return result:gsub("%s+", "")
+    for _, path in ipairs({ "/proc/sys/kernel/hostname", "/etc/hostname" }) do
+        local handle = io.open(path, "r")
+        if handle then
+            local result = (handle:read("*a") or ""):gsub("%s+", "")
+            handle:close()
+            if result ~= "" then return result end
+        end
+    end
+    return "default"
 end
 
 -- Get current hostname (e.g., "desktop-pc" or "thinkpad")
