@@ -303,6 +303,7 @@ hl.bind(mainMod .. " + 7", hl.dsp.focus({ workspace = 7 }))
 hl.bind(mainMod .. " + 8", hl.dsp.focus({ workspace = 8 }))
 hl.bind(mainMod .. " + 9", hl.dsp.focus({ workspace = 9 }))
 hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
+hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = "name:Games" }))
 
 hl.bind(mainMod .. " + KP_1", hl.dsp.focus({ workspace = 1 }))
 hl.bind(mainMod .. " + KP_2", hl.dsp.focus({ workspace = 2 }))
@@ -502,12 +503,25 @@ hl.workspace_rule({
     workspace = "name:Empty",
     monitor = monitors.left,
 })
+hl.workspace_rule({
+    workspace = "name:Games",
+    monitor = monitors.right,
+    border_size = 1,
+})
+
 
 hl.window_rule({
     match = {
         class = "^(org.remmina.Remmina)$",
     },
     workspace = "7",
+})
+
+hl.window_rule({
+    match = {
+        class = "^(steam)$",
+    },
+    workspace = "name:Games",
 })
 
 hl.config({
