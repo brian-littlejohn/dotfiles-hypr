@@ -39,7 +39,7 @@ window#waybar {
   text-decoration: underline;
 }
 
-#clock, #battery, #network, #cpu, #memory {
+#clock, #battery, #network, #cpu, #memory, #custom-bt-battery {
   padding: 0 10px;
 }
 
@@ -56,5 +56,15 @@ window#waybar {
 	color: #f38ba8;
 }
 #custom-otp.unlocked {
+	color: #a6e3a1;
+}
+
+#custom-bt-battery.low {
+	color: #f38ba8;
+}
+#custom-bt-battery.medium {
+	color: #f9e2af;
+}
+#custom-bt-battery.high {
 	color: #a6e3a1;
 }

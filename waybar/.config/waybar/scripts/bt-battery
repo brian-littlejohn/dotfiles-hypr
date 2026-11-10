@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Prints the battery percentage of connected Bluetooth device(s) as waybar JSON.
+# Prints nothing (module hides) when no connected device reports a battery level.
+out=""
+tip=""
+while read -r _ mac name; do
+  info=$(bluetoothctl info "$mac" 2>/dev/null) || continue
+  grep -q 'Connected: yes' <<<"$info" || continue
+  pct=$(grep -oP 'Battery Percentage:.*\(\K[0-9]+' <<<"$info")
+  [ -z "$pct" ] && continue
+  [ -z "$out" ] && out="$pct"
+  tip+="${tip:+\n}$name: $pct%"
+done < <(bluetoothctl devices Connected 2>/dev/null || bluetoothctl devices 2>/dev/null)
+
+if [ -z "$out" ]; then
+  echo '{"text": "", "class": "disconnected"}'
+else
+  if [ "$out" -lt 20 ]; then cls="low"
+  elif [ "$out" -lt 50 ]; then cls="medium"
+  else cls="high"; fi
+  printf '{"text": "󰋋 %s%%", "tooltip": "%s", "class": "%s"}\n' "$out" "$tip" "$cls"
+fi

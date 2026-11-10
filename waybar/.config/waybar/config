@@ -6,7 +6,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["network"],
-  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "battery", "clock","custom/otp", "tray","custom/power"],
+  "modules-right": ["cpu", "memory", "wireplumber", "bluetooth", "custom/bt-battery", "battery", "clock","custom/otp", "tray","custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -84,6 +84,12 @@
 	"format": " {status}",
   },
 
+
+  "custom/bt-battery": {
+	"exec": "~/.config/waybar/scripts/bt-battery",
+	"return-type": "json",
+	"interval": 10
+  },
 
   "tray": {
     "spacing": 20
