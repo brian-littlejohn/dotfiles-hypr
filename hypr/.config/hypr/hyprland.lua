@@ -470,7 +470,7 @@ hl.workspace_rule({
     workspace = "6",
     default_name = "6:Coding",
     border_size = 1,
-    monitor = monitors.left,
+    monitor = monitors.right,
 })
 
 hl.workspace_rule({
